@@ -14,7 +14,17 @@ module.exports = function (self) {
 			  // Save selected channel in memory or state.
 			},
 		},
+		// Update channels
+		update_channels: {
+			label: 'Update Channels',
+			options: [],
+			callback: () => {
+			  // Use Restreamer API to update channels
+			  updateChannels();
+			},
+		},
 		// Add a publication stream
+		// Honestly, probably not something we can do via button pushes
 		add_egress_stream: {
 			label: 'Add Egress Stream',
 			options: [
@@ -54,6 +64,7 @@ module.exports = function (self) {
 			},
 		},
 		// Toggle a publication stream
+		// Essentially we're going to set the "state.order" field on the egress stream to start or stop
 		toggle_egress_stream: {
 			label: 'Toggle Egress Stream',
 			options: [
@@ -69,6 +80,7 @@ module.exports = function (self) {
 			},
 		},
 		// Toggle an ingestion (channel source) stream
+		// Essentially we're going to set the "state.order" field on the ingress stream to start or stop
 		toggle_ingress_stream: {
 			label: 'Toggle Ingress Stream',
 			options: [

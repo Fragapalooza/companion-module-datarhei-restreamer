@@ -257,22 +257,22 @@ class ModuleInstance extends InstanceBase {
 	// the "reference" is the channel ID, I don't really know what's involved in this process
 	// the api call /api/v3/process?reference=REFERENCE_ID is used to get the channel objects
 
-	// id: restreamer-ui:egress is a publication method
-	// state.order value of "start" means the publication is toggled on
-	// state.order value of "stop" means the publication is toggled off
-	// state.exec value of "running" means the publication is connected
-	// state.exec value of "failed" means the publication is not connected (possibly due to no source)
-	// state.exec value of "finished" means the publication is not connected (and not trying to)
-	// metadata.restreamer-ui.name is the publication destination name
-
 	// id: restreamer-ui:ingest is a channel input method
 	// state.order value of "start" means the channel source is listening
 	// state.order value of "stop" means the channel source is *NOT* listening
 	// state.exec value of "running" means the channel source is connected
 	// state.exec value of "failed" means the channel source is not connected (possibly due to no source)
-	// state.exec value of "finished" means the channel source is not connected (and not trying to)
+	// state.exec value of "finished" means the channel source is not connected (and not trying to), should only be possible when state.order is "stopped"
 	// metadata.restreamer-ui.meta.name is the channel name
 
+	// id: restreamer-ui:egress is a publication method
+	// state.order value of "start" means the publication is toggled on
+	// state.order value of "stop" means the publication is toggled off
+	// state.exec value of "running" means the publication is connected
+	// state.exec value of "failed" means the publication is not connected (possibly due to no source)
+	// state.exec value of "finished" means the publication is not connected (and not trying to), should only be possible when state.order is "stopped"
+	// metadata.restreamer-ui.name is the publication destination name
+	
 	// Function 
 
 
