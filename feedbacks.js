@@ -1,11 +1,11 @@
-const { combineRgb } = require('@companion-module/base')
+const { combineRgb, CompanionFeedbackAdvancedEvent, CompanionFeedbackBooleanEvent } = require('@companion-module/base')
 
 module.exports = async function (self) {
 	self.setFeedbackDefinitions({
 		ChannelState: {
-			type: 'boolean',
+			type: 'advanced',
 			label: 'Stream State Feedback',
-			description: 'Provide feedback on stream state (active/inactive)',
+			description: 'Provide feedback on stream state (active/inactive/listening/connected)',
 			options: [
 				{
 					id: 'stream_id',
@@ -19,6 +19,8 @@ module.exports = async function (self) {
 					choices: [
 					{ id: 'active', label: 'Active' },
 					{ id: 'inactive', label: 'Inactive' },
+					{ id: 'listening', label: 'Listening' },
+					{ id: 'connected', label: 'Connected' },
 					],
 				},
 			],
