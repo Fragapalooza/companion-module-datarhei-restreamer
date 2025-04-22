@@ -1,0 +1,26 @@
+{
+	"id": "datarhei-restreamer",
+	"name": "datarhei-restreamer",
+	"shortname": "restreamer",
+	"description": "A module for controlling the Datarhei Restreamer",
+	"version": "0.1.0",
+	"license": "MIT",
+	"repository": "git+https://github.com/gostlund/companion-module-datarhei-restreamer.git",
+	"bugs": "https://github.com/gostlund/companion-module-datarhei-restreamer/issues",
+	"maintainers": [
+		{
+			"name": "Gavin Ostlund",
+			"email": "kyrin@fragapalooza.ca"
+		}
+	],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../main.js"
+	},
+	"legacyIds": [],
+	"manufacturer": "Fragapalooza",
+	"products": ["Restreamer"],
+	"keywords": []
+}
